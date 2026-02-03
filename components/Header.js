@@ -25,6 +25,7 @@ export default async function Header() {
                 </div>
             ) : (
                 <div style={{ display: 'flex' }}>
+                    <span style={{ fontSize: '24px' }}>로그인하세요</span>
                     <SignInButton
                         onSignIn={async () => {
                             'use server';
