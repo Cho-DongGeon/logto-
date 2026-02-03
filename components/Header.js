@@ -8,12 +8,14 @@ import { signUpAction } from '@/features/login/action';
 export default async function Header() {
     const { isAuthenticated, claims } = await getLogtoContext(logtoConfig);
     console.log('Header - isAuthenticated:', isAuthenticated);
-    console.log('Header - claims: ', claims)
+    console.log('Header - claims: ', claims);
     return (
-        <div style={{ marginLeft: '20px', display: 'inline-block' }}>
+        <div style={{ width: '100%', padding: '10px', marginLeft: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             {isAuthenticated ? (
                 <div style={{ display: 'inline-block' }}>
-                    <span>안녕하세요 [ {claims?.username} ] 님</span>
+                    <span style={{ fontSize: '24px' }}>
+                        안녕하세요 <strong>[ {claims?.username} ]</strong> 님
+                    </span>
                     <SignOutButton
                         onSignOut={async () => {
                             'use server';
