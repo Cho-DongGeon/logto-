@@ -18,10 +18,6 @@ export default function Navigation() {
                 Home
             </Link>
             <span style={{ fontSize: '48px' }}>&nbsp;|&nbsp;</span>
-            {/* <Link href={'/login'} style={{ fontSize: '48px' }}>
-                Login
-            </Link> */}
-            {/* <span style={{ fontSize: '48px' }}>&nbsp;|&nbsp;</span> */}
             <Link href={'/notice'} style={linkStyle('/notice')}>
                 Notice
             </Link>

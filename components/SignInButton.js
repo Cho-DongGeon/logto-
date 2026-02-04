@@ -2,12 +2,7 @@
 
 export default function SignInButton({ onSignIn }) {
     return (
-        <button
-            onClick={() => {
-                onSignIn();
-            }}
-        >
-            Sign In
-        </button>
+        // prettier-ignore
+        <button onClick={() => {onSignIn()}}>Sign In</button>
     );
 }

@@ -2,12 +2,7 @@
 
 export default function SignOutButton({ onSignOut }) {
     return (
-        <button
-            onClick={() => {
-                onSignOut();
-            }}
-        >
-            Sign Out
-        </button>
+        // prettier-ignore
+        <button onClick={() => {onSignOut()}}>Sign Out</button>
     );
 }

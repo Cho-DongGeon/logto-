@@ -16,6 +16,7 @@ export default async function Header() {
                     <span style={{ fontSize: '24px' }}>
                         안녕하세요 <strong>[ {claims?.username} ]</strong> 님
                     </span>
+                    {/* 로그아웃 */}
                     <SignOutButton
                         onSignOut={async () => {
                             'use server';
@@ -26,12 +27,14 @@ export default async function Header() {
             ) : (
                 <div style={{ display: 'flex' }}>
                     <span style={{ fontSize: '24px' }}>로그인하세요</span>
+                    {/* 로그인 */}
                     <SignInButton
                         onSignIn={async () => {
                             'use server';
                             await signIn(logtoConfig);
                         }}
                     />
+                    {/* 회원가입 */}
                     <SignUpButton action={signUpAction} />
                 </div>
             )}
